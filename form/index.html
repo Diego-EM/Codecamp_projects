@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Survey form</h1>
+    <p id="description">Thank you for your time.</p>
+    <form id="survey-form">
+        <label for="name" id="name-label">Name
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </label>
+        <label for="email" id="email-label">Email
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </label>
+        <label for="number" id="number-label">Age
+            <input type="number" id="number" name="number" min="15" max="100" placeholder="Enter your age" required>
+        </label>
+        <select name="dropdown" id="dropdown">
+            <option value disabled selected hidden>Select your current ocupation</option>
+            <option value="employee">Employee</option>
+            <option value="student">Student</option>
+            <option value="other">Other</option>
+        </select>
+        <div class="form_group">
+            <p>Which sport you like the most?</p>
+            <label><input type="radio" name="sport" value="soccer" class="input_radio" checked>Soccer</label>
+            <label><input type="radio" name="sport" value="basketball" class="input_radio">Basketball</label>
+            <label><input type="radio" name="sport" value="baseball" class="input_radio">Baseball</label>
+            <label><input type="radio" name="sport" value="volleyball" class="input_radio">Volleyball</label>
+            <label><input type="radio" name="sport" value="other" class="input_radio">Other</label>
+        </div>
+        <div class="form_group">
+            <p>Which hobbies do you like?</p>
+            <label><input type="checkbox" name="hobbie" value="sports" class="input_checkbox">Sports</label>
+            <label><input type="checkbox" name="hobbie" value="games" class="input_checkbox">Videogames</label>
+            <label><input type="checkbox" name="hobbie" value="cooking" class="input_checkbox">Cooking</label>
+            <label><input type="checkbox" name="hobbie" value="reading" class="input_checkbox">Reading</label>
+            <label><input type="checkbox" name="hobbie" value="music" class="input_checkbox">Listening to music</label>
+            <label><input type="checkbox" name="hobbie" value="other" class="input_checkbox">Other</label>
+        </div>
+        <div class="form_group">
+            <p>If you want to leave a comment</p>
+            <textarea name="comment" id="textarea" placeholder="Enter your comment..."></textarea>
+        </div>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+</body>
+</html>

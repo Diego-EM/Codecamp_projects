@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  min-height: 100vh;
+  background-image: linear-gradient(to left top, #2b7dc7, #2d7aca, #3277cc, #3874ce, #3f71cf);
+}
+body label {
+  font-weight: 100;
+}
+body input, body select, body textarea {
+  background-color: #f5feff;
+  border: 1px solid #2d7aca;
+  border-radius: 5px;
+}
+body input:focus, body select:focus, body textarea:focus {
+  outline: 1px solid #3f71cf;
+}
+body #title, body #description {
+  color: #f5feff;
+  text-align: center;
+}
+body #title {
+  margin: 10px 20px 5px 20px;
+}
+body #description {
+  margin-bottom: 20px;
+}
+body #survey-form {
+  padding: 20px 25px;
+  width: 40%;
+  min-width: 300px;
+  background-image: linear-gradient(to bottom, #ffffff, #fcfcff, #f8f9ff, #f3f6ff, #edf3ff);
+  border-radius: 5px;
+}
+body #survey-form #name-label, body #survey-form #email-label, body #survey-form #number-label {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+body #survey-form #name-label input, body #survey-form #email-label input, body #survey-form #number-label input {
+  margin-top: 5px;
+  padding: 5px;
+}
+body #survey-form #dropdown {
+  margin: 10px 0 5px 0;
+  padding: 5px;
+  width: 100%;
+}
+body #survey-form .form_group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+body #survey-form .form_group p {
+  margin: 5px 0;
+}
+body #survey-form .form_group label {
+  margin: 5px 0;
+}
+body #survey-form .form_group input {
+  margin-right: 5px;
+}
+body #survey-form .form_group #textarea {
+  padding: 5px;
+  height: 100px;
+  width: 100%;
+  resize: none;
+}
+body #survey-form #submit {
+  justify-self: center;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #2d7aca;
+  color: #f5feff;
+  border: none;
+  transition: all 250ms;
+}
+body #survey-form #submit:hover {
+  cursor: pointer;
+  background-color: #3774b4;
+}
+
+/*# sourceMappingURL=styles.css.map */
