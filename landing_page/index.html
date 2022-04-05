@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <a href="" id="header-logo">
+            <img src="assets/logo.svg" id="header-img">
+            MyTravel
+        </a>
+        <nav id="nav-bar">
+            <ul>
+                <a href="#main-img"><li class="nav-link">
+                    <img src="assets/home.svg" alt="Home" class="icon"><span>Home</span>
+                </li></a>
+                <a href="#description-section"><li class="nav-link">
+                    <img src="assets/places.svg" alt="Places" class="icon"><span>Places</span>
+                </li></a>
+                <a href="#email-section"><li class="nav-link">
+                    <img src="assets/email.svg" alt="Email" class="icon"><span>Contact Us</span>
+                </li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="main-img">
+            <h1>Live new experiences around the world</h1>
+        </section>
+        <section id="description-section">
+            <div id="video-section">
+                <h2>Visit interesting places</h2>
+                <iframe id="video"
+                src="https://www.youtube.com/embed/8NEeTZDplZ4"
+                title="Travel around the world"
+                frameborder="0"
+                allowfullscreen></iframe>
+            </div>
+            <div id="places-section">
+                <h2>Popular places</h2>
+                <div class="places">
+                    <div class="place">
+                        <p>Acapulco</p>
+                        <figure>
+                            <img src="assets/acapulco.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="place">
+                        <p>Cancún</p>
+                        <figure>
+                            <img src="assets/cancun.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="place">
+                        <p>Puerto Rico</p>
+                        <figure>
+                            <img src="assets/puertorico.jpeg" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/beach.png" id="beach-image">
+        </section>
+        <section id="email-section">
+            <h2>Travel with us</h2>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <input type="submit" value="Get started" id="submit">
+            </form>
+            <img src="assets/waves.svg" id="waves">
+        </section>
+    </main>
+    <footer>
+        Copyright 2022, MyTravel
+    </footer>
+</body>
+</html>

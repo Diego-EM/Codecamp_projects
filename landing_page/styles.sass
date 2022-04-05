@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap')
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Ubuntu', sans-serif
+    scroll-behavior: smooth
+
+body
+    background-image: linear-gradient(to right top, #f8fff8, #f7fff6, #f7fff3, #f8fff0, #f9ffed)
+    font-size: 16px
+
+    #header
+        position: fixed
+        top: 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 15px 20px
+        height: 50px
+        width: 100vw
+        background-color: #fbfdf8
+        z-index: 1000
+
+        #header-logo
+            display: flex
+            align-items: center
+            color: #1245ac
+            font-weight: 500
+            font-size: 1.6em
+
+            #header-img
+                margin-right: 10px
+                height: 40px
+                width: 40px
+
+        #nav-bar
+            width: 40%
+
+            ul
+                display: flex
+                justify-content: space-evenly
+                
+                li
+                    list-style: none
+                    transition: filter 150ms
+
+                    &:hover
+                        filter: brightness(1.2)
+
+                .nav-link
+                    .icon
+                        display: none
+
+                    span
+                        color: #1245ac
+                        list-style: none
+
+                @media only screen and (max-width: 530px)
+                    .nav-link
+                        .icon
+                            display: inline
+
+                        span
+                            display: none
+
+    main
+        padding-top: 50px
+
+        section
+            overflow: hidden
+
+        #main-img
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 70vh
+            background-image: url('./assets/mainimg.jpg')
+            background-position: center
+            background-size: cover
+
+            h1
+                margin: 0 20px
+                color: #fbfdf8
+                font-size: 2.5em
+                font-weight: 500
+                text-align: center
+
+        #email-section
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            min-height: 45vh
+            background-image: linear-gradient(to right top, #1245ac, #194db6, #2054c1, #265ccb, #2b64d6)
+
+            h2
+                margin: 10px
+                color: #fbfdf8
+                font-weight: 500
+                text-align: center
+                z-index: 100
+
+            #form
+                display: flex
+                flex-direction: column
+                z-index: 100
+
+                input
+                    padding: 8px
+                    border: none
+                    border-radius: 2px
+
+                #email
+                    margin-bottom: 10px
+                    transition: all 150ms
+
+                    &:focus
+                        outline: 2px solid #3b777b
+
+                #submit
+                    background-color: #2ca94c
+                    color: #fbfdf8
+                    transition: filter 150ms
+
+                    &:hover
+                        cursor: pointer
+                        filter: saturate(1.1)
+
+            #waves
+                position: absolute
+                bottom: 0
+                max-height: 560px
+                min-width: 100%
+                z-index: 0
+                opacity: 0.8
+
+        #description-section
+            position: relative
+            background-image: linear-gradient(to right bottom, #f0e959, #f0dd4a, #f0d13c, #f0c52d, #f0b91e)
+
+            h2
+                color: #877227
+                text-align: center
+                z-index: 100
+
+            #video-section, #places-section
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 20px
+
+                #video
+                    height: 250px
+                    min-width: 250px
+                    width: 50%
+                    max-width: 500px
+                    margin: 20px
+                    z-index: 100
+
+            .places
+                display: flex
+                justify-content: space-around
+                flex-wrap: wrap
+                margin: 10px 
+
+                .place
+                    position: relative
+                    margin: 10px 15px 
+                    transition: all 150ms
+                    z-index: 100
+
+                    figure
+                        height: 150px
+                        width: 270px
+                        border-radius: 5px
+                        overflow: hidden
+                        z-index: 10
+                        
+                        img
+                            object-fit: cover
+                            width: 100%
+                            transition: transform 150ms
+
+                    p
+                        position: absolute
+                        bottom: 0
+                        padding: 5px 0
+                        border-radius: 0 0 5px 5px
+                        width: 100%
+                        background-color: #fbfdf8
+                        text-align: center
+                        color: #1245ac
+                        opacity: 0
+                        transition: all 150ms
+                        z-index: 0
+
+                    &:hover
+                        cursor: pointer
+
+                        figure
+                            border-radius: 5px 5px 0 0
+
+                        img
+                            transform: scale(1.1)
+
+                        p
+                            opacity: 1
+                            transform: translateY(25px)
+
+            #beach-image
+                position: absolute
+                bottom: 0
+                right: -113px
+                width: 50%
+                z-index: 0
+                opacity: 0.5
+
+        #benefits-section
+            min-height: 50vh
+                    
+    footer
+        padding: 10px
+        background-color: #fbfdf8
+        color: #1245ac
+        font-size: 0.8em
+        text-align: right
+
+a
+    text-decoration: none

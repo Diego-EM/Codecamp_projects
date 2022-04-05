@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(to right top, #f8fff8, #f7fff6, #f7fff3, #f8fff0, #f9ffed);
+  font-size: 16px;
+}
+body #header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  height: 50px;
+  width: 100vw;
+  background-color: #fbfdf8;
+  z-index: 1000;
+}
+body #header #header-logo {
+  display: flex;
+  align-items: center;
+  color: #1245ac;
+  font-weight: 500;
+  font-size: 1.6em;
+}
+body #header #header-logo #header-img {
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+}
+body #header #nav-bar {
+  width: 40%;
+}
+body #header #nav-bar ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+body #header #nav-bar ul li {
+  list-style: none;
+  transition: filter 150ms;
+}
+body #header #nav-bar ul li:hover {
+  filter: brightness(1.2);
+}
+body #header #nav-bar ul .nav-link .icon {
+  display: none;
+}
+body #header #nav-bar ul .nav-link span {
+  color: #1245ac;
+  list-style: none;
+}
+@media only screen and (max-width: 530px) {
+  body #header #nav-bar ul .nav-link .icon {
+    display: inline;
+  }
+  body #header #nav-bar ul .nav-link span {
+    display: none;
+  }
+}
+body main {
+  padding-top: 50px;
+}
+body main section {
+  overflow: hidden;
+}
+body main #main-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-image: url("./assets/mainimg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+body main #main-img h1 {
+  margin: 0 20px;
+  color: #fbfdf8;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+}
+body main #email-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 45vh;
+  background-image: linear-gradient(to right top, #1245ac, #194db6, #2054c1, #265ccb, #2b64d6);
+}
+body main #email-section h2 {
+  margin: 10px;
+  color: #fbfdf8;
+  font-weight: 500;
+  text-align: center;
+  z-index: 100;
+}
+body main #email-section #form {
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+body main #email-section #form input {
+  padding: 8px;
+  border: none;
+  border-radius: 2px;
+}
+body main #email-section #form #email {
+  margin-bottom: 10px;
+  transition: all 150ms;
+}
+body main #email-section #form #email:focus {
+  outline: 2px solid #3b777b;
+}
+body main #email-section #form #submit {
+  background-color: #2ca94c;
+  color: #fbfdf8;
+  transition: filter 150ms;
+}
+body main #email-section #form #submit:hover {
+  cursor: pointer;
+  filter: saturate(1.1);
+}
+body main #email-section #waves {
+  position: absolute;
+  bottom: 0;
+  max-height: 560px;
+  min-width: 100%;
+  z-index: 0;
+  opacity: 0.8;
+}
+body main #description-section {
+  position: relative;
+  background-image: linear-gradient(to right bottom, #f0e959, #f0dd4a, #f0d13c, #f0c52d, #f0b91e);
+}
+body main #description-section h2 {
+  color: #877227;
+  text-align: center;
+  z-index: 100;
+}
+body main #description-section #video-section, body main #description-section #places-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+body main #description-section #video-section #video, body main #description-section #places-section #video {
+  height: 250px;
+  min-width: 250px;
+  width: 50%;
+  max-width: 500px;
+  margin: 20px;
+  z-index: 100;
+}
+body main #description-section .places {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+body main #description-section .places .place {
+  position: relative;
+  margin: 10px 15px;
+  transition: all 150ms;
+  z-index: 100;
+}
+body main #description-section .places .place figure {
+  height: 150px;
+  width: 270px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 10;
+}
+body main #description-section .places .place figure img {
+  object-fit: cover;
+  width: 100%;
+  transition: transform 150ms;
+}
+body main #description-section .places .place p {
+  position: absolute;
+  bottom: 0;
+  padding: 5px 0;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  background-color: #fbfdf8;
+  text-align: center;
+  color: #1245ac;
+  opacity: 0;
+  transition: all 150ms;
+  z-index: 0;
+}
+body main #description-section .places .place:hover {
+  cursor: pointer;
+}
+body main #description-section .places .place:hover figure {
+  border-radius: 5px 5px 0 0;
+}
+body main #description-section .places .place:hover img {
+  transform: scale(1.1);
+}
+body main #description-section .places .place:hover p {
+  opacity: 1;
+  transform: translateY(25px);
+}
+body main #description-section #beach-image {
+  position: absolute;
+  bottom: 0;
+  right: -113px;
+  width: 50%;
+  z-index: 0;
+  opacity: 0.5;
+}
+body main #benefits-section {
+  min-height: 50vh;
+}
+body footer {
+  padding: 10px;
+  background-color: #fbfdf8;
+  color: #1245ac;
+  font-size: 0.8em;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
