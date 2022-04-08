@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap')
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+    scroll-behavior: smooth
+
+li
+    list-style: none
+
+a
+    text-decoration: none
+
+body
+    #nav-bar
+        position: fixed
+        top: 0
+        display: flex
+        justify-content: flex-end
+        width: 100%
+        background-image: linear-gradient(to right bottom, #1d1d1d, #191919, #151515, #111111, #0b0b0b)
+        z-index: 1000
+
+        ul
+            display: flex
+
+            li
+                margin: 5px 0
+
+            .nav-link
+                margin: 5px 10px
+                color: #ffffff
+                font-size: 1em
+
+    #welcome-section
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100vh
+        width: 100%
+        background-image: url(./assets/main-img.jpg)
+        background-attachment: fixed
+        background-position-x: center
+        background-size: cover
+
+        h1, p
+            margin: 0 20px
+            text-align: center
+
+        h1
+            color: #ffffff
+            font-size: 4em
+
+        p
+            color: #ffffff
+            font-size: 2em
+            background-color: #ef6161
+            padding: 0 20px
+
+    #projects
+        padding: 25px
+        background-color: #141414
+
+        h2
+            color: #ffffff
+            text-align: center
+
+        #projects-content
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            margin: 20px 10px
+
+            .project-title
+                position: relative
+                display: flex
+                justify-content: center
+                height: 200px
+                width: 270px
+                margin: 5px 10px
+                border-radius: 2px
+                overflow: hidden
+
+                img
+                    object-fit: cover
+                    height: 100%
+
+                &:hover
+                    img
+                        filter: brightness(0.8)
+
+                p
+                    position: absolute
+                    right: 0
+                    bottom: 0
+                    padding: 5px
+                    color: #ffffff
+                    background-color: #141414
+                    border-start-start-radius: 5px
+
+    #profile-link
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        min-height: 50vh
+        background-image: url('./assets/contact-img.jpg')
+        background-attachment: fixed
+        background-position: center
+        background-size: cover
+
+        h2, p
+            color: #ffffff
+            margin: 0 20px
+            text-align: center
+
+        h2
+            font-size: 3em
+
+        p
+            font-size: 1.5em
+
+        @media only screen and (max-width: 420px)
+            h2
+                font-size: 2.2em
+
+            p
+                font-size: 1em
+        
+        .contact-links
+            display: flex
+            flex-wrap: wrap
+            margin: 15px 10px
+
+            li
+                margin: 10px
+
+            img
+                width: 30px
